@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/logo_l"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="33dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isikan Data Anda !"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="33dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logo_l" />
+    </RelativeLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        android:inputType="textCapWords"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="30"
+        app:met_singleLineEllipsis="true"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"
+        android:inputType="textCapWords"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="50"
+        app:met_singleLineEllipsis="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin :" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jenis_kelamin"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/pria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Pria"
+            android:paddingRight="30dp"/>
+
+        <RadioButton
+            android:id="@+id/wanita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wanita" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hobi :"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <CheckBox
+            android:id="@+id/hb_jogging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogging"
+            android:paddingRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_bersepeda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bersepeda"
+            android:paddingRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_membaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Membaca"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <CheckBox
+            android:id="@+id/hb_menari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menari"
+            android:paddingRight="21dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_melukis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Melukis"
+            android:paddingRight="34dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_bermain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bermain"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seberapa sering anda melakukan Hobi anda?"
+        android:padding="5dp"/>
+
+    <SeekBar
+        android:id="@+id/aktivitas"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="2"
+        android:progress="0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 Hari sekali"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Hari sekali"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setiap hari"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"/>
+</LinearLayout>
